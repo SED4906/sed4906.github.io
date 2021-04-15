@@ -2,9 +2,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
   <title>SED4906</title>
+  <script>
+    function w3_open() {
+      document.getElementById("sidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("sidebar").style.display = "none";
+    }
+  </script>
 </head>
 <body>
-  <iframe src="https://discord.com/widget?id=395269621143306250&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  <button class="w3-button w3-teal w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div id="sidebar" class="w3-sidebar w3-bar-block" style="width:25%">
+    <iframe src="https://discord.com/widget?id=395269621143306250&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+  </div>
+  <header>SED4906</header>
 </body>
 </html>
