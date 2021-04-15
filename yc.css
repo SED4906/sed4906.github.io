@@ -1,0 +1,8 @@
+p {margin: 0;}
+
+#youtube-channel {width: 580px; height: 280px; overflow: hidden; background: white; position: relative;  border: solid 2px gray; padding: 5px;}
+#youtube-channel.youtube .carousel {width: 230px; height: 278px; overflow: auto; position: absolute; right: 0px; background: #ddd;}
+#youtube-channel.youtube .thumbnail {margin: 0 5px 0 0; width: 100px; border: 1px solid black;}
+#youtube-channel.youtube iframe.player {width: 338px; height: 278px; overflow: auto; border: 0;}
+#youtube-channel .yt-descript {color: #000; display:block; height:90px; margin-right:5px;}
+#youtube-channel .carItemContain{height:100px;}
