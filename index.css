@@ -1,0 +1,13 @@
+@font-face {
+  font-family: cove;
+  src: url("/cove.ttf");
+}
+body {
+  font-family: cove;
+  font-size: 32px;
+  text-align: center;
+}
+a:link, a:visited {
+  color: gray;
+  text-decoration: none;
+}
