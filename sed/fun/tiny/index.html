@@ -21,14 +21,18 @@
   		const ctx = canvas.getContext('2d');
   		const img = new Image();
       xs=0;
+      xsm=0;
       ys=1;
       for(i=0;i<s.length;i++) {
         if(32 <= s.charCodeAt(i) <= 126){
-          if(s[i] == '\n') {ys++;}
-          else xs++;
+          if(s[i] == '\n') {ys++;xs=0;}
+          else {
+            xs++;
+            if(xsm < xs) xsm = xs;
+          }
         }
       }
-      canvas.width = xs*4;
+      canvas.width = xsm*4;
       canvas.height = ys*6;
   		img.onload = () => {
         x=0;
