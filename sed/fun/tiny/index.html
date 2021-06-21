@@ -13,8 +13,14 @@
   <meta name="theme-color" content="#ffffff"/>
 </head>
 <body>
+  <style>
+  body {
+    background-color: black;
+    color: white;
+  }
+  </style>
   <script>
-    function makeithappen() {
+    function makeithappen(argument) {
       const inputbox = document.getElementById('textbox');
       const s = inputbox.value;
   		const canvas = document.getElementById('tinycanvas');
@@ -46,13 +52,14 @@
   			}
   		}
   		img.onerror = err => { throw err }
-  		img.src = '4x6.png';
+      if(argument) img.src = '4x6.png'; else img.src = '4x6tw.png';
   	}
   </script>
   <a href="..">&#xf56c;Back</a><br/>
   Write in the text box and then make it small!<br/>
   <textarea id="textbox"></textarea>
-  <button onclick="makeithappen()">Make it small!</button><br/>
+  <button onclick="makeithappen(true)">Make it small! (Black on white)</button><br/>
+  <button onclick="makeithappen(false)">Make it small! (White on transparent, will appear invisible)</button><br/>
   <canvas id="tinycanvas"/>
 </body>
 </html>

@@ -13,8 +13,7 @@
   <meta name="theme-color" content="#ffffff"/>
 </head>
 <body>
-  <a href="..">&#xf56c;Back</a><br/>
-  <canvas id="tinycanvas"/>
+  <canvas width="100vw" height="100vh" id="tinycanvas"/>
   <canvas id="buffer" display="none"/>
   <script>
     function colormul(data,r,g,b,a) {
@@ -53,7 +52,8 @@
         ctx.putImageData(imgdata, x, y);
       }
       img.onerror = err => { throw err }
-      img.src = '4x6tw.png';
+      img.crossOrigin = "Anonymous";
+      img.src = 'http://4906.org/sed/fun/system/4x6tw.png';
     }
     function makeithappen() {
       rendertextcolor("test",0,0,16,6,1,0,0,1);
