@@ -10,4 +10,5 @@ body {
 a:link, a:visited {
   color: gray;
   text-decoration: none;
+  display: inline-block;
 }
