@@ -35,7 +35,7 @@
   <a href="https://github.com/SED4906"><i class="fab fa-github"></i>Github</a>&nbsp;
   <a href="https://steamcommunity.com/id/sed4906/"><i class="fab fa-steam"></i>Steam</a>&nbsp;
   <a href="https://tf2maps.net/members/sed4906.33880/"><i class="fas fa-hammer"></i>TF2Maps</a>&nbsp;<br/>
-  <iframe id="latestVideoEmbed" vnum='0' cid="UCH5mD-d7Hk-TdLa_1an76-A" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+  <iframe class="latestVideoEmbed" vnum='0' cid="UCH5mD-d7Hk-TdLa_1an76-A" width="600" height="340" frameborder="0" allowfullscreen></iframe>
   <script>
     var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
 
@@ -51,8 +51,10 @@
       );
     }
 
-    var iframev = document.getElementById('latestVideoEmbed');
-    loadVideo(iframev);
+    var iframes = document.getElementsByClassName('latestVideoEmbed');
+    for (var i = 0, len = iframes.length; i < len; i++) {
+      loadVideo(iframes[i]);
+    }
   </script>
 </body>
 </html>
