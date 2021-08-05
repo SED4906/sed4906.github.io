@@ -55,9 +55,10 @@ cat <<EOF > /mnt/installer_select_locale.sh
 #!/bin/bash
 echo "Choose a locale, e.g. en_US"
 read localemain
-echo $localemain.UTF-8 UTF-8 > /etc/locale.gen
+export tempthing=".UTF-8"
+echo "$localemain$tempthing UTF-8" > /etc/locale.gen
 locale-gen
-echo $localemain.UTF-8 > /etc/locale.conf
+echo "$localemain$tempthing" > /etc/locale.conf
 exit
 EOF
 chmod +x /mnt/installer_select_locale.sh
@@ -68,11 +69,12 @@ select_hostname() {
 cat <<EOF > /mnt/installer_select_hostname.sh
 echo "Your hostname?"
 read hostnamechoice
+export tempthing=".localdomain"
 echo $hostnamechoice > /etc/hostname
 cat <<END > /etc/hosts
 127.0.0.1 $hostnamechoice
 ::1 $hostnamechoice
-127.0.1.1 $hostnamechoice.localdomain $hostnamechoice
+127.0.1.1 $hostnamechoice$tempthing $hostnamechoice
 END
 exit
 EOF
@@ -88,7 +90,7 @@ exit
 EOF
 chmod +x /mnt/installer_select_root_password.sh
   arch-chroot /mnt /installer_select_root_password.sh
-  rm /mnt/installer_select_root_password
+  rm /mnt/installer_select_root_password.sh
 }
 install_grub_bootloader() {
 cat <<EOF > /mnt/installer_install_grub_bootloader.sh
@@ -97,7 +99,7 @@ exit
 EOF
 chmod +x /mnt/installer_install_grub_bootloader.sh
   arch-chroot /mnt /installer_install_grub_bootloader.sh
-  rm /mnt/installer_install_grub_bootloader
+  rm /mnt/installer_install_grub_bootloader.sh
 }
 initial_setup
 select_disk
