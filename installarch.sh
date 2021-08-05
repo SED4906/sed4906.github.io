@@ -38,59 +38,60 @@ install_base() {
   genfstab -U /mnt >> /mnt/etc/genfstab
 }
 select_timezone() {
-  cat <<EOF > /mnt/installer_select_timezone.sh
-  echo "Your timezone?"
-  select tzregion in /usr/share/zoneinfo/*; do
-    select tzfile in $tzregion/*; do
-       ln -sf $tzfile /etc/localtime
-      break
-    done
+cat <<EOF > /mnt/installer_select_timezone.sh
+#!/bin/bash
+echo "Your timezone?"
+select tzregion in /usr/share/zoneinfo/*; do
+  select tzfile in $tzregion/*; do
+     ln -sf $tzfile /etc/localtime
     break
   done
-  hwclock --systohc
-  exit
-  EOF
+  break
+done
+hwclock --systohc
+exit
+EOF
   arch-chroot /mnt /installer_select_timezone.sh
 }
 select_locale() {
-  cat <<EOF > /mnt/installer_select_locale.sh
-  #!/bin/bash
-  echo "Choose a locale, e.g. en_US"
-  read localemain
-  echo $localemain.UTF-8 UTF-8 > /etc/locale.gen
-  locale-gen
-  echo $localemain.UTF-8 > /etc/locale.conf
-  exit
-  EOF
+cat <<EOF > /mnt/installer_select_locale.sh
+#!/bin/bash
+echo "Choose a locale, e.g. en_US"
+read localemain
+echo $localemain.UTF-8 UTF-8 > /etc/locale.gen
+locale-gen
+echo $localemain.UTF-8 > /etc/locale.conf
+exit
+EOF
   arch-chroot /mnt /installer_select_locale.sh
 }
 select_hostname() {
-  cat <<EOF > /mnt/installer_select_hostname.sh
-  echo "Your hostname?"
-  read hostnamechoice
-  echo $hostnamechoice > /etc/hostname
-  cat <<END > /etc/hosts
-  127.0.0.1 $hostnamechoice
-  ::1 $hostnamechoice
-  127.0.1.1 $hostnamechoice.localdomain $hostnamechoice
-  END
-  exit
-  EOF
+cat <<EOF > /mnt/installer_select_hostname.sh
+echo "Your hostname?"
+read hostnamechoice
+echo $hostnamechoice > /etc/hostname
+cat <<END > /etc/hosts
+127.0.0.1 $hostnamechoice
+::1 $hostnamechoice
+127.0.1.1 $hostnamechoice.localdomain $hostnamechoice
+END
+exit
+EOF
   arch-chroot /mnt /installer_select_hostname.sh
 }
 select_root_password() {
-  cat <<EOF > /mnt/installer_select_root_password.sh
-  echo "Your root password?"
-  passwd
-  exit
-  EOF
+cat <<EOF > /mnt/installer_select_root_password.sh
+echo "Your root password?"
+passwd
+exit
+EOF
   arch-chroot /mnt /installer_select_root_password.sh
 }
 install_grub_bootloader() {
-  cat <<EOF > /mnt/installer_install_grub_bootloader.sh
-  grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-  exit
-  EOF
+cat <<EOF > /mnt/installer_install_grub_bootloader.sh
+grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+exit
+EOF
   arch-chroot /mnt /installer_install_grub_bootloader.sh
 }
 initial_setup
