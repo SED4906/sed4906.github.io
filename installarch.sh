@@ -40,14 +40,9 @@ install_base() {
 select_timezone() {
 cat <<EOF > /mnt/installer_select_timezone.sh
 #!/bin/bash
-echo "Your timezone?"
-select tzfolder in /usr/share/zoneinfo/*; do
-  select tzfile in $tzfolder/*; do
-    ln -sf $tzfile /etc/localtime
-    break
-  done
-  break
-done
+echo "Select a timezone, e.g. America/Los_Angeles"
+read tzfile
+ln -sf /usr/share/zoneinfo/$tzfile /etc/localtime
 hwclock --systohc
 exit
 EOF
