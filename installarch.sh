@@ -18,8 +18,7 @@ pacstrap /mnt base base-devel linux linux-firmware iwd modemmanager nano man-db 
 genfstab -U /mnt >> /mnt/etc/genfstab
 arch-chroot /mount
 echo Select a timezone.
-select tzfile in /usr/share/zoneinfo/*/*
-ln -sf $tzfile /etc/localtime
+select tzfile in /usr/share/zoneinfo/*/*; do ln -sf $tzfile /etc/localtime; done
 hwclock --systohc
 echo Choose a locale, as in en_US
 read localemain
