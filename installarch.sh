@@ -17,8 +17,9 @@ reflector
 pacstrap /mnt base base-devel linux linux-firmware iwd modemmanager nano man-db man-pages texinfo python3 grub efibootmgr
 genfstab -U /mnt >> /mnt/etc/genfstab
 arch-chroot /mount
-echo Select a timezone.
-select tzfile in /usr/share/zoneinfo/*/*; do ln -sf $tzfile /etc/localtime; done
+echo "Select a timezone. (like America/Los_Angeles)"
+read tzfile
+do ln -sf /usr/share/zoneinfo/$tzfile /etc/localtime
 hwclock --systohc
 echo Choose a locale, as in en_US
 read localemain
@@ -36,4 +37,4 @@ EOF
 echo Set the root password.
 passwd
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
-echo Done.
+echo Done. You can reboot the system.
