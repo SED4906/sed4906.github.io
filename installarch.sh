@@ -41,9 +41,9 @@ select_timezone() {
 cat <<EOF > /mnt/installer_select_timezone.sh
 #!/bin/bash
 echo "Your timezone?"
-select tzregion in /usr/share/zoneinfo/*; do
-  select tzfile in $tzregion/*; do
-     ln -sf $tzfile /etc/localtime
+select tzfolder in /usr/share/zoneinfo/*; do
+  select tzfile in $tzfolder/*; do
+    ln -sf $tzfile /etc/localtime
     break
   done
   break
@@ -51,7 +51,9 @@ done
 hwclock --systohc
 exit
 EOF
+chmod +x /mnt/installer_select_timezone.sh
   arch-chroot /mnt /installer_select_timezone.sh
+  rm /mnt/installer_select_timezone.sh
 }
 select_locale() {
 cat <<EOF > /mnt/installer_select_locale.sh
@@ -63,7 +65,9 @@ locale-gen
 echo $localemain.UTF-8 > /etc/locale.conf
 exit
 EOF
+chmod +x /mnt/installer_select_locale.sh
   arch-chroot /mnt /installer_select_locale.sh
+  rm /mnt/installer_select_locale.sh
 }
 select_hostname() {
 cat <<EOF > /mnt/installer_select_hostname.sh
@@ -77,7 +81,9 @@ cat <<END > /etc/hosts
 END
 exit
 EOF
+chmod +x /mnt/installer_select_hostname.sh
   arch-chroot /mnt /installer_select_hostname.sh
+  rm /mnt/installer_select_hostname.sh
 }
 select_root_password() {
 cat <<EOF > /mnt/installer_select_root_password.sh
@@ -85,14 +91,18 @@ echo "Your root password?"
 passwd
 exit
 EOF
+chmod +x /mnt/installer_select_root_password.sh
   arch-chroot /mnt /installer_select_root_password.sh
+  rm /mnt/installer_select_root_password
 }
 install_grub_bootloader() {
 cat <<EOF > /mnt/installer_install_grub_bootloader.sh
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
 exit
 EOF
+chmod +x /mnt/installer_install_grub_bootloader.sh
   arch-chroot /mnt /installer_install_grub_bootloader.sh
+  rm /mnt/installer_install_grub_bootloader
 }
 initial_setup
 select_disk
