@@ -57,7 +57,7 @@ cat <<EOF > /mnt/installer_select_locale.sh
 #!/bin/bash
 echo "$localemain.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
-echo "$localemain.UTF-8" > /etc/locale.conf
+echo "LANG=$localemain.UTF-8" > /etc/locale.conf
 exit
 EOF
 chmod +x /mnt/installer_select_locale.sh
@@ -93,6 +93,7 @@ rm /mnt/installer_select_root_password.sh
 install_grub_bootloader() {
 cat <<EOF > /mnt/installer_install_grub_bootloader.sh
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB
+grub-mkconfig -o /boot/grub/grub.cfg
 exit
 EOF
 chmod +x /mnt/installer_install_grub_bootloader.sh
