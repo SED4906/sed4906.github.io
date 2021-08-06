@@ -34,7 +34,7 @@ mount_disks() {
 }
 install_base() {
   reflector
-  pacstrap /mnt base base-devel linux linux-firmware iwd modemmanager nano man-db man-pages texinfo python3 grub efibootmgr
+  pacstrap /mnt base base-devel linux linux-firmware dhcpcd iw iwd wpa_supplicant modemmanager nano man-db man-pages texinfo python3 grub efibootmgr
   genfstab -U /mnt >> /mnt/etc/genfstab
 }
 select_timezone() {
@@ -80,6 +80,18 @@ chmod +x /mnt/installer_select_hostname.sh
 arch-chroot /mnt /installer_select_hostname.sh
 rm /mnt/installer_select_hostname.sh
 }
+enable_services() {
+cat <<EOF > /mnt/installer_enable_services.sh
+systemctl enable systemd-networkd
+systemctl enable iwd
+systemctl enable modemmanager
+systemctl enable dhcpcd
+exit
+EOF
+chmod +x /mnt/installer_enable_services.sh
+arch-chroot /mnt /installer_enable_services.sh
+rm /mnt/installer_enable_services.sh
+}
 select_root_password() {
 cat <<EOF > /mnt/installer_select_root_password.sh
 echo "Your root password?"
@@ -108,5 +120,6 @@ install_base
 select_timezone
 select_locale
 select_hostname
+enable_services
 select_root_password
 install_grub_bootloader
