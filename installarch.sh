@@ -42,7 +42,7 @@ cat <<EOF > /mnt/installer_select_timezone.sh
 #!/bin/bash
 echo "Select a timezone, e.g. America/Los_Angeles"
 read tzfile
-ln -sf /usr/share/zoneinfo/$tzfile /etc/localtime
+ln -sf "/usr/share/zoneinfo/${tzfile}" /etc/localtime
 hwclock --systohc
 exit
 EOF
@@ -55,10 +55,9 @@ cat <<EOF > /mnt/installer_select_locale.sh
 #!/bin/bash
 echo "Choose a locale, e.g. en_US"
 read localemain
-export tempthing=".UTF-8"
-echo "$localemain$tempthing UTF-8" > /etc/locale.gen
+echo "${localemain}.UTF-8 UTF-8" > /etc/locale.gen
 locale-gen
-echo "$localemain$tempthing" > /etc/locale.conf
+echo "${localemain}.UTF-8" > /etc/locale.conf
 exit
 EOF
 chmod +x /mnt/installer_select_locale.sh
@@ -69,12 +68,11 @@ select_hostname() {
 cat <<EOF > /mnt/installer_select_hostname.sh
 echo "Your hostname?"
 read hostnamechoice
-export tempthing=".localdomain"
-echo $hostnamechoice > /etc/hostname
+echo "${hostnamechoice}" > /etc/hostname
 cat <<END > /etc/hosts
 127.0.0.1 $hostnamechoice
 ::1 $hostnamechoice
-127.0.1.1 $hostnamechoice$tempthing $hostnamechoice
+127.0.1.1 $hostnamechoice.localdomain $hostnamechoice
 END
 exit
 EOF
