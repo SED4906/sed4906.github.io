@@ -83,6 +83,7 @@ rm /mnt/installer_select_hostname.sh
 enable_services() {
 cat <<EOF > /mnt/installer_enable_services.sh
 systemctl enable systemd-networkd
+systemctl enable systemd-resolved
 systemctl enable iwd
 systemctl enable modemmanager
 systemctl enable dhcpcd
