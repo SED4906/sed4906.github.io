@@ -3,15 +3,24 @@
   src: url("/cove.ttf");
 }
 body {
+  background-color: #474747;
+  color: #C4CAC5;
   font-family: cove;
   font-size: 32px;
   text-align: center;
+  transition: all 1s ease-in-out;
+}
+.clickable {
+  color: #658038;
 }
 a:link, a:visited {
-  color: gray;
+  color: #D4AF37;
   text-decoration: none;
   display: inline-block;
+  transition: all 1s ease-in-out;
 }
 nav {
   float: left;
+  text-align: left;
+  transition: all 1s ease-in-out;
 }
