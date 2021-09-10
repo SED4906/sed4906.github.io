@@ -8,6 +8,8 @@
   <link rel="icon" type="image/png" sizes="16x16" href="https://4906.org/favicon-16x16.png"/>
   <link rel="manifest" href="https://4906.org/site.webmanifest"/>
   <link rel="mask-icon" href="https://4906.org/safari-pinned-tab.svg" color="#5bbad5"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
   <!--
   <script src="https://kit.fontawesome.com/f0403fd460.js" crossorigin="anonymous"></script>
   -->
@@ -27,6 +29,17 @@
   <p>I'm SED. I write computer programs and draw things. Sometimes I even write programs to draw things. Like these little JavaScript applets below. Have fun with those.</p>
   <h2>Applets</h2>
   <a href="tiny">Tiny Text Creator</a>
+  <h2>Projects</h2>
+  <div class="github-carousel">
+    <div class="github-card" data-user="4906" data-width="400" data-height="" data-theme="default"></div>
+    <div class="github-card" data-github="4906/HIP" data-width="400" data-height="" data-theme="default"></div>
+    <div class="github-card" data-github="4906/plastic2" data-width="400" data-height="" data-theme="default"></div>
+    <div class="github-card" data-github="4906/engine" data-width="400" data-height="" data-theme="default"></div>
+    <div class="github-card" data-user="SED4906" data-width="400" data-height="" data-theme="default"></div>
+    <div class="github-card" data-github="SED4906/jumpcutter" data-width="400" data-height="" data-theme="default"></div>
+    <div class="github-card" data-github="SED4906/clipboardmonitoring" data-width="400" data-height="" data-theme="default"></div>
+    <div class="github-card" data-github="SED4906/sed4906.github.io" data-width="400" data-height="" data-theme="default"></div>
+  </div>
   <h2>Socials</h2>
   <p>
     <a href="https://www.youtube.com/channel/UCH5mD-d7Hk-TdLa_1an76-A">YouTube</a>
@@ -42,6 +55,8 @@
   </p>
   <h2>Latest video on YouTube</h2>
   <iframe class="latestVideoEmbed" vnum='0' cid="UCH5mD-d7Hk-TdLa_1an76-A" width="600" height="340" frameborder="0" allowfullscreen></iframe>
+  <script src="https://cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <script>
     var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
 
@@ -61,6 +76,18 @@
     for (var i = 0, len = iframes.length; i < len; i++) {
       loadVideo(iframes[i]);
     }
+
+    $(document).ready(function(){
+      $('.github-carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        centerMode: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        variableWidth: true
+      });
+    });
   </script>
 </body>
 </html>
