@@ -1,78 +1,12 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="utf-8">
   <title>4906.org</title>
-  <link rel="apple-touch-icon" sizes="120x120" href="https://4906.org/apple-touch-icon.png"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="https://4906.org/favicon-32x32.png"/>
-  <link rel="icon" type="image/png" sizes="16x16" href="https://4906.org/favicon-16x16.png"/>
-  <link rel="manifest" href="https://4906.org/site.webmanifest"/>
-  <link rel="mask-icon" href="https://4906.org/safari-pinned-tab.svg" color="#5bbad5"/>
-  <!--
-  <script src="https://kit.fontawesome.com/f0403fd460.js" crossorigin="anonymous"></script>
-  -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="index.css"/>
-  <meta name="msapplication-TileColor" content="#da532c"/>
-  <meta name="theme-color" content="#ffffff"/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://4906.org/"/>
-  <meta property="og:title" content="4906.org"/>
-  <meta property="og:description" content="The domain of SED"/>
-  <meta property="og:image" content="https://4906.org/m/rotomos.gif"/>
-</head>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>html{background-image:url(bpaper.7e1e9ef40122eb839f87.avif);background-color:#deb887;text-align:center;font-size:32px;}</style><link rel="stylesheet" href="styles.c6dfea2ca3ca6365ee97.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.c6dfea2ca3ca6365ee97.css"></noscript></head>
 <body>
-  <header>You haven't seen the last of</header>
-  <h1>4906.org</h1>
-  <p>I'm SED. I write computer programs and draw things. Sometimes I even write programs to draw things. Like these little JavaScript applets below. Have fun with those.</p>
-  <h2>Applets</h2>
-  <a href="tiny">Tiny Text Creator</a>
-  <h2>Socials</h2>
-  <p>
-    <a href="https://www.youtube.com/channel/UCH5mD-d7Hk-TdLa_1an76-A">YouTube</a>
-    <a href="https://twitch.tv/sed4906h">Twitch</a>
-    <a href="https://discord.gg/qSZzfgHaSP">Discord</a>
-    <a href="https://sed4906.tumblr.com">Tumblr</a>
-    <a href="https://twitter.com/sed4906">Twitter</a>
-    <a href="https://www.instagram.com/sed4906h/">Instagram</a>
-    <a href="https://reddit.com/u/sed4906h">Reddit</a>
-    <a href="https://github.com/SED4906">Github</a>
-    <a href="https://steamcommunity.com/id/sed4906/">Steam</a>
-    <a href="https://tf2maps.net/members/sed4906.33880/">TF2Maps</a>
-  </p>
-  <h2>Latest video on YouTube</h2>
-  <iframe class="latestVideoEmbed" vnum='0' cid="UCH5mD-d7Hk-TdLa_1an76-A" width="600" height="340" frameborder="0" allowfullscreen></iframe>
-  <script>
-    var reqURL = "https://api.rss2json.com/v1/api.json?rss_url=" + encodeURIComponent("https://www.youtube.com/feeds/videos.xml?channel_id=");
+  <app-root></app-root>
+<script src="runtime.51268dc8f19cb42ea4c6.js" defer></script><script src="polyfills.2aee0159ececb2da2e03.js" defer></script><script src="main.0a51a8abbc724c398472.js" defer></script>
 
-    function loadVideo(iframe) {
-      $.getJSON(reqURL + iframe.getAttribute('cid'),
-        function(data) {
-          var videoNumber = (iframe.getAttribute('vnum') ? Number(iframe.getAttribute('vnum')) : 0);
-          console.log(videoNumber);
-          var link = data.items[videoNumber].link;
-          id = link.substr(link.indexOf("=") + 1);
-          iframe.setAttribute("src", "https://youtube.com/embed/" + id + "?controls=0&autoplay=1");
-        }
-      );
-    }
-
-    var iframes = document.getElementsByClassName('latestVideoEmbed');
-    for (var i = 0, len = iframes.length; i < len; i++) {
-      loadVideo(iframes[i]);
-    }
-
-    $(document).ready(function(){
-      $('.github-carousel').slick({
-        infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        variableWidth: true
-      });
-    });
-  </script>
-</body>
-</html>
+</body></html>
