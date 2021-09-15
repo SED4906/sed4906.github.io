@@ -16,9 +16,9 @@ select_disk() {
 }
 select_partitions() {
   echo "Which is the root parition?"
-  read rootpart
+  export rootpart=/dev/mmcblk0p2
   echo "Which is the EFI system partition?"
-  read efisyspart
+  export efisyspart=/dev/mmcblk0p1
   echo "Format the disk now?"
   select yn in "Yes" "No"; do
     case $yn in
@@ -34,12 +34,12 @@ mount_disks() {
 }
 install_base() {
   reflector
-  pacstrap /mnt base base-devel linux linux-firmware dhcpcd iw iwd wpa_supplicant modemmanager nano man-db man-pages texinfo python3 grub efibootmgr
+  pacstrap /mnt base base-devel linux linux-firmware dhcpcd iw iwd wpa_supplicant modemmanager nano man-db man-pages texinfo python3 grub efibootmgr plasma-desktop sddm dolphin firefox discord
   genfstab -U /mnt >> /mnt/etc/genfstab
 }
 select_timezone() {
 echo "Select a timezone, e.g. America/Los_Angeles"
-read tzfile
+export tzfile=America/Los_Angeles
 cat <<EOF > /mnt/installer_select_timezone.sh
 #!/bin/bash
 ln -sf /usr/share/zoneinfo/$tzfile /etc/localtime
@@ -52,7 +52,7 @@ rm /mnt/installer_select_timezone.sh
 }
 select_locale() {
 echo "Choose a locale, e.g. en_US"
-read localemain
+export localemain=en_US
 cat <<EOF > /mnt/installer_select_locale.sh
 #!/bin/bash
 echo "$localemain.UTF-8 UTF-8" > /etc/locale.gen
@@ -66,7 +66,7 @@ chmod +x /mnt/installer_select_locale.sh
 }
 select_hostname() {
 echo "Your hostname?"
-read hostnamechoice
+export hostnamechoice=kludge
 cat <<EOF > /mnt/installer_select_hostname.sh
 echo $hostnamechoice > /etc/hostname
 cat <<END > /etc/hosts
@@ -87,6 +87,7 @@ systemctl enable systemd-resolved
 systemctl enable iwd
 systemctl enable ModemManager
 systemctl enable dhcpcd
+systemctl enable sddm
 exit
 EOF
 chmod +x /mnt/installer_enable_services.sh
