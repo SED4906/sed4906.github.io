@@ -1,0 +1,14 @@
+html {
+    background-color: wheat;
+}
+body {
+    text-align: center;
+    margin: auto;
+    font-size: 24px;
+    font-family: 'Segoe UI Variable', 'Segoe UI', Verdana, Tahoma, sans-serif;
+}
+p {
+    margin: auto;
+    margin-bottom: 0.7em;
+    max-width: 640px;
+}

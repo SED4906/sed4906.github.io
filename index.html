@@ -1,66 +1,53 @@
-
-<!-- saved from url=(0045)file:///D:/Source%20Code/Web/site2/index.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
     <title>4906.org</title>
-    <meta http-equiv="�content-language�" content="�en-us�/"><meta property="og:type" content="website">
-<meta property="og:url" content="https://4906.org/">
-<meta property="og:title" content="4906.org">
-<meta property="og:description" content="Swapping bytes so you don&#39;t have to.">
-<meta property="og:image" content="https://4906.org/m/rotomos.gif">
-<style>
-    html {
-        background-color: wheat;
-    }
-    body {
-        text-align: center;
-        margin: auto;
-        font-size: 24px;
-        font-family: 'Segoe UI Variable', 'Segoe UI', Verdana, Tahoma, sans-serif;
-    }
-    p {
-        margin: auto;
-        margin-bottom: 0.7em;
-        max-width: 640px;
-    }
-</style>
+    <meta http-equiv="content-language" content="en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://4906.org/">
+    <meta property="og:title" content="4906.org">
+    <meta property="og:description" content="Swapping bytes so you don&#39;t have to.">
+    <meta property="og:image" content="https://4906.org/m/rotomos.gif">
+    <link rel="stylesheet" href="/site.css">
 </head>
 <body>
     <script>
-        function renderTinyText() {
-            canvas = document.getElementById("canvas");
-            argument = document.getElementById("argument");
-            area = document.getElementById("area");
-            const s = area.value;
-            const ctx = canvas.getContext('2d');
-            if(!ctx) return;
-            const img = new Image();
-            var xs=0;
-            var xsm=0;
-            var ys=1;
-            for(var i=0;i<s.length;i++) {
-                if(s[i] == '\n') {ys++;xs=0;}
-                else if(32 <= s.charCodeAt(i) && s.charCodeAt(i) <= 126) {
-                xs++;
-                if(xsm < xs) xsm = xs;
-                }
+    function renderTinyText() {
+        canvas = document.getElementById("canvas");
+        argument = document.getElementById("argument");
+        area = document.getElementById("area");
+        const s = area.value;
+        const ctx = canvas.getContext('2d');
+        if(!ctx) return;
+        const img = new Image();
+        var xs=0;
+        var xsm=0;
+        var ys=1;
+        for(var i=0;i<s.length;i++) {
+            if(s[i] == '\n') {ys++;xs=0;}
+            else if(32 <= s.charCodeAt(i) && s.charCodeAt(i) <= 126) {
+            xs++;
+            if(xsm < xs) xsm = xs;
             }
-            canvas.width = xsm*4;
-            canvas.height = ys*6;
-            img.onload = () => {
-            var x=0;
-            var y=0;
-            for(i=0;i<s.length;i++) {
-                if(s[i] == '\n') {y++; x=0;}
-                else if(32 <= s.charCodeAt(i) && s.charCodeAt(i) <= 126) {ctx.drawImage(img, Math.min(s.charCodeAt(i)*4, 127*4), 0, 4, 6, x*4, y*6, 4, 6);
-                x++};
-                }
-            }
-            img.onerror = err => { throw err }
-            if(argument.checked) img.src = 'assets/4x6tw.png'; else img.src = 'assets/4x6.png';
         }
+        canvas.width = xsm*4;
+        canvas.height = ys*6;
+        img.onload = () => {
+        var x=0;
+        var y=0;
+        for(i=0;i<s.length;i++) {
+            if(s[i] == '\n') {y++; x=0;}
+            else if(32 <= s.charCodeAt(i) && s.charCodeAt(i) <= 126) {ctx.drawImage(img, Math.min(s.charCodeAt(i)*4, 127*4), 0, 4, 6, x*4, y*6, 4, 6);
+            x++};
+            }
+        }
+        img.onerror = err => { throw err }
+        if(argument.checked) img.src = 'assets/4x6tw.png'; else img.src = 'assets/4x6.png';
+    }
     </script>
     <h1 style="margin-block-end:0">4906.org</h1>
-    <p><b>This site is meant to load on any browser.<br>Well, within reason...</b></p>
+    <p><b>This site is meant to load on any browser.<br>Well, within reason...</b><br><i><a href="/btw">And by the way...</a></i></p>
     <p>I'm SED, someone who loves Pokemon despite never having played any of the games before; my favorite is Rotom!</p>
     <p>
         <a href="https://www.youtube.com/channel/UCH5mD-d7Hk-TdLa_1an76-A">YouTube</a>&nbsp;
