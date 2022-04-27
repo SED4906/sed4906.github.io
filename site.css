@@ -1,40 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive:wght,CASL@300,1&display=swap');
+@font-face {
+    font-family: 'agavenf';
+    src: url('agavenf.ttf');
+  }
 html {
     background-color: #334;
     color: #fff;
 }
 body {
-    display: grid;
-    grid-template-columns: min-content auto;
-    grid-template-areas: "header header"
-    "nav article"
-    "footer footer";
-    font-size: 20px;
-    font-family: 'Recursive', sans-serif;
+    font-size: 24px;
+    font-family: agavenf, sans-serif;
 }
 header {
-    grid-area:header;
     text-align: center;
     border-bottom: 1px solid white;
 }
-footer {
-    grid-area:footer;
-    text-align: center;
-    border-top: 1px solid white;
-}
 nav {
-    grid-area: nav;
+    float: left;
     border-right: 1px solid white;
     margin-right: 1em;
     padding-right: 1em;
-}
-article {
-    grid-area: article;
 }
 a {
     color: #0aa;
     text-decoration: none;
 }
 a:hover {
-    text-decoration: underline;
+    font-weight: 900;
+    color: #aaa;
 }
