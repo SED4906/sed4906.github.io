@@ -1,11 +1,3 @@
-html {
-    background-color: #334;
-    color: #fff;
-}
-body {
-    font-size: 24px;
-    font-family: 'Iosevka Custom Web', monospace;
-}
 header {
     text-align: center;
     border-bottom: 1px solid white;
@@ -15,12 +7,4 @@ nav {
     border-right: 1px solid white;
     margin-right: 1em;
     padding-right: 1em;
-}
-a {
-    color: #0aa;
-    text-decoration: none;
-}
-a:hover {
-    font-weight: 900;
-    color: #aaa;
 }
