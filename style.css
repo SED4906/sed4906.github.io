@@ -1,0 +1,30 @@
+body {
+  background: linear-gradient(#a55, #000, #111);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: Verdana;
+}
+
+a:link {
+  color: #4cf;
+}
+
+a:visited {
+  color: #f8f;
+}
+
+a:hover {
+  text-decoration: underline dotted 1px;
+}
+
+.card {
+  background-color: #444;
+  padding: 12px;
+  max-width: 90%;
+  width: 500px;
+  border: 5px dotted transparent;
+  border-radius: 15px;
+  background: linear-gradient(#666, #444, #444);
+  margin:auto;
+}
