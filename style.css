@@ -28,3 +28,7 @@ a:hover {
   background: linear-gradient(#666, #444, #444);
   margin:auto;
 }
+
+img {
+  max-width: 100%;
+}
