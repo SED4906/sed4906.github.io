@@ -40,9 +40,3 @@ h1 {
   background: #191919;
   margin:auto;
 }
-
-.overlayimage {
-  margin-bottom: -3em;
-  z-index: 1;
-  position: relative;
-}
