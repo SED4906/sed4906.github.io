@@ -7,51 +7,59 @@
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
-    <div class="card">
-    <h1>Another visitor...</h1>
-
-    <p>Stay a while; <a href="https://youtu.be/i1_fDwX1VVY">stay <em>forever!</em></a></p>
-
-    <p>I'm SED.</p>
-
-    <img src="m/comingforyou.png">
+    <div class="gridbox">
+      <div class="card"> 
+        <img class="overlayimage" src="m/comingforyou.png">
+        <h1>I'm SED.</h1>
+        <p>I'm a rotom.</p>
+        </div><br>
+        
+        <div class="card">
+        <h1>Projects</h1>
     
-    <p>I'm a rotom.</p>
-    </div><br>
+        <a href="parenthesis.html">Parenthesis</a><br>
+        </div><br>
     
-    <div class="card">
-    <h1>Projects</h1>
-
-    <a href="parenthesis.html">Parenthesis</a><br>
-    </div><br>
-
-    <div class="card">
-    <h1>Where I am</h1>
-
-    <a href="https://www.youtube.com/sed4906">YouTube</a><br>
-    <a href="https://www.twitch.tv/sed4906h">Twitch</a><br>
-    <a href="https://discord.gg/qSZzfgHaSP">Discord</a><br>
-    <a href="https://app.revolt.chat/invite/gYxz1mzX">Revolt</a><br>
-    <a href="https://sed4906.tumblr.com/">Tumblr</a><br>
-    <a href="https://twitter.com/sed4906">Twitter</a><br>
-    <a href="m/404.ogg" title="[deleted]" style="color: red;">Instagram</a><br>
-    <a href="https://reddit.com/u/sed4906h">Reddit</a><br>
-    <a href="https://github.com/SED4906">Github</a><br>
-    <a href="https://steamcommunity.com/id/sed4906/">Steam</a><br>
-    <a href="https://www.deviantart.com/sed4906">DeviantArt</a><br>
-    <a href="https://tf2maps.net/members/sed4906.33880/">TF2Maps</a><br>
-    </div><br>
+        <div class="card">
+        <h1>Where I am</h1>
     
-    <div class="card">
-    <h1>Tiny text generator</h1>
-    <p>Create text in a small (4x6) bitmap <a href="http://angband.pl/font/tinyfont.html">font.</a></p>
-    <script src="tiny.js"></script>
-    <form>
-    <textarea id="area" oninput="renderTinyText()"></textarea><br>
-    <label for="argument">Transparent</label>
-    <input  type="checkbox" id="argument" name="Transparent (white on alpha)" onclick="renderTinyText()" checked>
-    </form>
-    <canvas id="canvas" width="0" height="0"></canvas>
+        <a href="https://www.youtube.com/sed4906">YouTube</a>
+        <!--<a href="https://www.twitch.tv/sed4906h">Twitch</a><br>-->
+        <a href="https://discord.gg/qSZzfgHaSP">Discord</a><br>
+        <!--<a href="https://app.revolt.chat/invite/gYxz1mzX">Revolt</a><br>-->
+        <a href="https://sed4906.tumblr.com/">Tumblr</a>
+        <a href="https://twitter.com/sed4906">Twitter</a><br>
+        <!--<a href="m/404.ogg" title="[deleted]" style="color: red;">Instagram</a><br>-->
+        <!--<a href="https://reddit.com/u/sed4906h">Reddit</a><br>-->
+        <a href="https://github.com/SED4906">Github</a>
+        <a href="https://steamcommunity.com/id/sed4906/">Steam</a><br>
+        <!--<a href="https://www.deviantart.com/sed4906">DeviantArt</a><br>-->
+        <!--<a href="https://tf2maps.net/members/sed4906.33880/">TF2Maps</a><br>-->
+        </div><br>
+        
+        <div class="card">
+        <h1>Tiny text generator</h1>
+        <p>Create text in a small (4x6) bitmap <a href="http://angband.pl/font/tinyfont.html">font.</a></p>
+        <script src="tiny.js"></script>
+        <form>
+        <textarea id="area" oninput="renderTinyText()"></textarea><br>
+        <label for="argument">Transparent</label>
+        <input  type="checkbox" id="argument" name="Transparent (white on alpha)" onclick="renderTinyText()" checked>
+        </form>
+        <canvas id="canvas" width="0" height="0"></canvas>
+        </div><br>
+
+        <div class="card">
+          <h1>Less tiny text generator</h1>
+          <p>Create text in a less small (9x14) bitmap <a href="http://angband.pl/font/tinyfont.html">font.</a></p>
+          <script src="lesstiny.js"></script>
+          <form>
+          <textarea id="lessarea" oninput="renderLessTinyText()"></textarea><br>
+          <label for="lessargument">Transparent</label>
+          <input  type="checkbox" id="lessargument" name="Transparent (white on alpha)" onclick="renderLessTinyText()" checked>
+          </form>
+          <canvas id="lesscanvas" width="0" height="0"></canvas>
+          </div>
     </div>
   </body>
 </html>
