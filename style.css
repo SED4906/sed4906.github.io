@@ -5,19 +5,12 @@ body {
   color: hsl(200 20% 95%);
 }
 
-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-section > div {
-  background-color: hsl(200 20% 10%);
-  padding: 1rem;
-  box-shadow: 0 0 1rem hsl(0 0% 0% / 0.15);
-}
-
 footer {
   position: fixed;
   bottom: 0;
+}
+
+#Carousel {
+  text-align: center;
+  height: 75vh;
 }
