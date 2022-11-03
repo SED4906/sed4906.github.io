@@ -5,12 +5,11 @@ body {
   color: hsl(200 20% 95%);
 }
 
+section > div {
+  
+}
+
 footer {
   position: fixed;
   bottom: 0;
-}
-
-#Carousel {
-  text-align: center;
-  height: 75vh;
 }
