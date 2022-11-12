@@ -1,15 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Inter:wght@200&display=swap');
+
 body {
-  font-family: system-ui;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
   padding: 5rem 3rem;
-  background-color: hsl(200 50% 5%);
+  background-color: hsl(200 10% 10%);
   color: hsl(200 20% 95%);
 }
 
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
 section > div {
-  
+  max-width: 500px;
+  padding: 1rem;
 }
 
 footer {
   position: fixed;
   bottom: 0;
+}
+
+a:link {
+  color:cornflowerblue;
+}
+
+a:visited {
+  color:darkmagenta;
+}
+
+h1, h3, h6 {
+  font-family: 'Atkinson Hyperlegible', sans-serif;
 }
