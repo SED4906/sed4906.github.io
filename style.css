@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Inter:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Inter:wght@300&display=swap');
 
 body {
   font-family: 'Inter', sans-serif;
-  font-weight: 600;
   padding: 5rem 3rem;
-  background-color: hsl(200 10% 10%);
-  color: hsl(200 20% 95%);
+  background-color:darkslategray;
+  color: white;
 }
 
 section {
@@ -16,7 +15,10 @@ section {
 
 section > div {
   max-width: 500px;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background-color: black;
 }
 
 footer {
@@ -26,10 +28,11 @@ footer {
 
 a:link {
   color:cornflowerblue;
+  font-weight: 900;
 }
 
 a:visited {
-  color:darkmagenta;
+  color:mediumpurple;
 }
 
 h1, h3, h6 {
