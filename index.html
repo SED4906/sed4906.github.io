@@ -37,13 +37,35 @@
       </div>
       
       <div>
-        <h3>More...</h3>
-        <a href="text.html">Tiny Text Generators</a>
+        <h2>Tiny text generator</h2>
+        <p>Create text in a small (4x6) bitmap <a href="http://angband.pl/font/tinyfont.html">font.</a></p>
+        <script src="tiny.js"></script>
+        <form>
+        <textarea id="area" oninput="renderTinyText()"></textarea><br>
+        <label for="argument">Transparent</label>
+        <input  type="checkbox" id="argument" name="Transparent (white on alpha)" onclick="renderTinyText()" checked>
+        </form>
+        <canvas id="canvas" width="0" height="0"></canvas>
+      </div>
+
+      <div>
+        <h2>Less tiny text generator</h2>
+        <p>Create text in a less small (9x14) bitmap <a href="https://int10h.org/oldschool-pc-fonts/fontlist/font?hp_150_re">font.</a></p>
+        <script src="lesstiny.js"></script>
+        <form>
+        <textarea id="lessarea" oninput="renderLessTinyText()"></textarea><br>
+        <label for="lessargument">Transparent</label>
+        <input  type="checkbox" id="lessargument" name="Transparent (white on alpha)" onclick="renderLessTinyText()" checked>
+        </form>
+        <canvas id="lesscanvas" width="0" height="0"></canvas>
       </div>
     </section>
     <footer>
       © 2022, SED4906
       <a href="https://www.youtube.com/@4906">YouTube</a>
+      <a href="https://www.youtube.com/@4906h">YouTube (secondary)</a>
+      <!-- kzob54vaZF4M21iR4NuZZz9+kn4DxXOZlS5yu2rQbI5FU2rxiCCRq/K6bSuXgMlJthGpF0hb/54RNSrC6rqC3g== -->
+      <!-- 4IvKzTvxsIIa2KgW/8tXmbLWKPBgrQckRtXpl4feFULPY64A4qO4RgQwXV/tSflz/4VK/zJvXVG8Pxuj0sASkv/GNjC61uTnLXZ9HEmpNrELItjULOlMnjf9LYck556V -->
       <a href="https://discord.gg/qSZzfgHaSP">Discord</a>
       <a href="https://sed4906.tumblr.com/">Tumblr</a>
       <a href="https://github.com/SED4906">Github</a>
