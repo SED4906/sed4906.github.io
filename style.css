@@ -32,6 +32,11 @@ section > div > header {
   color: #fff;
 }
 
+section > div > header > span {
+  margin: 0;
+  margin-right:-16px;
+}
+
 section > div > header > p {
   margin: 0;
   margin-left:16px;
