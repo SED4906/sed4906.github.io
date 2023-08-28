@@ -7,37 +7,40 @@
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
   </head>
   <body>
-    <h4>
+    <h3>
       Welcome to 4906.org
+    </h3>
+    <h4>
+      Click any section to expand it.
     </h4>
     <section>
-      <div>
-        <header><span>⚡</span><p>I'm SED.</p></header>
+      <details>
+        <summary>⚡ I'm SED.</summary>
         <article><img src="m/comingforyou.png" style="margin:auto">
         <p>I'm a rotom.</p></article>
-      </div>
+      </details>
 
-      <div>
-        <header><span>💭</span><p>About Me</p></header>
-        <article><p>I draw things, and sometimes write code.</p>
+      <details>
+        <summary>💭 About Me</summary>
+        <article><p>I <a href="https://sed4906.tumblr.com/">draw things</a>, and sometimes <a href="https://github.com/SED4906">write code</a>.</p>
         <p>There are some <a href="https://sed4906.itch.io">games I've made.</a> There aren't many right now.</p></article>
-      </div>
+      </details>
 
-      <div>
-        <header><span>🔠</span><p>Significance of SED</p></header>
+      <details>
+        <summary>🔠 Significance of SED</summary>
         <article><p>The "SED" part came from my top three Team Fortress 2 classes by play time.</p>
         <p>The Soldier_engie-demo → SolEngDem → SED</p>
         <p><i>Really</i> long ago it was sometimes shortened to TSED.</p></article>
-      </div>
+      </details>
 
-      <div>
-        <header><span>🔢</span><p>Significance of 4906</p></header>
+      <details>
+        <summary>🔢Significance of 4906</summary>
         <article><p>The "4906" part partially relates to <a href="https://www.youtube.com/@4096">4096</a></p>
-        <p>But it's really just 2¹² with the middle digits in Base 10 swapped.<br/>You may see a lowercase h appended in some places, as in the one hexadecimal notation.</p></article>
-      </div>
+        <p>But it's really just 2¹² with the middle digits in Base 10 swapped.<br/>You may see a lowercase h appended in some places, like Intel's hexadecimal syntax.</p></article>
+      </details>
       
-      <div>
-        <header><p>Tiny text generator</p></header>
+      <details>
+        <summary>Tiny text generator</summary>
         <article><p>Create text in a small (4x6) bitmap <a href="http://angband.pl/font/tinyfont.html">font.</a></p>
         <script src="tiny.js"></script>
         <form>
@@ -46,10 +49,10 @@
         <input  type="checkbox" id="argument" name="Transparent (white on alpha)" onclick="renderTinyText()" checked>
         </form>
         <canvas id="canvas" width="0" height="0"></canvas></article>
-      </div>
+      </details>
 
-      <div>
-        <header><p>Less tiny text generator</p></header>
+      <details>
+        <summary>Less tiny text generator</summary>
         <article><p>Create text in a less small (9x14) bitmap <a href="https://int10h.org/oldschool-pc-fonts/fontlist/font?hp_150_re">font.</a></p>
         <script src="lesstiny.js"></script>
         <form>
@@ -58,7 +61,7 @@
         <input  type="checkbox" id="lessargument" name="Transparent (white on alpha)" onclick="renderLessTinyText()" checked>
         </form>
         <canvas id="lesscanvas" width="0" height="0"></canvas></article>
-      </div>
+      </details>
     </section>
     <footer>
       🔗

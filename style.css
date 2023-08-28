@@ -7,7 +7,6 @@
   --primary: #515252;
   --secondary: #051D38;
   --text: #FFF;
-  --accent: #;
 }
 
 body {
@@ -17,41 +16,30 @@ body {
   font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
-section {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-section > div {
+section > div, section > details {
+  display: inline-block;
   background: var(--primary);
   margin: 0.5rem;
   padding: 0rem;
-  border-radius: 8px;
   font-size: 1rem;
   color: var(--text);
 }
 
-header {
+header, summary {
   display: flex;
   background: var(--secondary);
   margin: 0;
-  padding-left: 6px;
-  border-radius: 8px 8px 0 0;
-  min-height: 32px;
+  padding: 0 6px 0 6px;
+  min-height: 24px;
   font-size: 1rem;
   align-items:center;
   color: var(--text);
   font-family: 'Inter', sans-serif;
 }
 
-header > span {
-  margin: 0;
-  margin-right:-16px;
-}
-
-header > p {
-  margin: 0;
-  margin-left:16px;
+summary {
+  display: list-item;
+  padding: 0 6px 0 6px;
 }
 
 article {
@@ -63,10 +51,10 @@ article {
 
 footer {
   position: fixed;
+  padding: 0 4px 2px 2px;
   bottom: 0;
   color: var(--text);
   background-color: var(--primary);
-  border-radius: 8px 8px 0 0;
 }
 
 footer > a {
