@@ -13,47 +13,41 @@ body {
   background: var(--bg);
   padding: 5rem 3rem;
   color: var(--text);
-  font-family: 'Atkinson Hyperlegible', sans-serif;
-}
-
-section > div, section > details {
-  display: inline-block;
-  background: var(--primary);
-  margin: 0.5rem;
-  padding: 0rem;
-  font-size: 1rem;
-  color: var(--text);
-}
-
-header, summary {
-  display: flex;
-  background: var(--secondary);
-  margin: 0;
-  padding: 0 6px 0 6px;
-  min-height: 24px;
-  font-size: 1rem;
-  align-items:center;
-  color: var(--text);
   font-family: 'Inter', sans-serif;
 }
 
+section {
+  display: inline;
+}
+
+details {
+  display: inline;
+  background: var(--primary);
+  margin: 0.5rem;
+  padding: 0;
+  width: fit-content;
+}
+
+details[open] {
+  display: block;
+}
+
 summary {
-  display: list-item;
-  padding: 0 6px 0 6px;
+  background: var(--secondary);
+  margin: 0;
+  padding: 6px;
+  cursor: pointer;
 }
 
 article {
-  margin: 0.5rem;
-  padding: 0;
-  font-size: 1rem;
-  color: var(--text);
+  margin: 0;
+  font-family: 'Atkinson Hyperlegible', sans-serif;
 }
 
 footer {
   position: fixed;
   padding: 0 4px 2px 2px;
   bottom: 0;
-  color: var(--text);
   background-color: var(--primary);
 }
 
