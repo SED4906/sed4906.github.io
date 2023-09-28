@@ -49,6 +49,7 @@ footer {
   padding: 0 4px 2px 2px;
   bottom: 0;
   background-color: var(--primary);
+  cursor: default;
 }
 
 footer > a {
