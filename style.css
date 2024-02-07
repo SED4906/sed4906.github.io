@@ -1,19 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 :root {
-  --bg: #043770;
-  --link: #1F7EEA;
-  --visited: #B486BC;
-  --primary: #515252;
-  --secondary: #051D38;
-  --text: #FFF;
+  --bg: #24273a;
+  --link: #8aadf4;
+  --visited: #c6a0f6;
+  --primary: #6e738d;
+  --secondary: #181926;
+  --text: #cad3f5;
 }
 
 body {
   background: var(--bg);
   padding: 5rem 3rem;
   color: var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+  font-size: 20px;
 }
 
 section {
@@ -29,7 +30,7 @@ details {
 }
 
 details[open] {
-  display: block;
+  display: inline;
 }
 
 summary {
@@ -40,8 +41,7 @@ summary {
 }
 
 article {
-  margin: 0;
-  font-family: 'Atkinson Hyperlegible', sans-serif;
+  margin: 0.5em;
 }
 
 footer {
@@ -63,4 +63,44 @@ a:link {
 
 a:visited {
   color: var(--visited);
+}
+
+hr {
+  color: var(--text);
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: normal;
+}
+
+h6 {
+  overflow: hidden;
+  text-align: center;
+  cursor: default;
+}
+
+h6::before,
+h6::after {
+  background-color: var(--text);
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  margin: auto;
+  width: 50%;
+}
+
+h6::before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+h6::after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
+figure {
+  display: inline-block;
 }
