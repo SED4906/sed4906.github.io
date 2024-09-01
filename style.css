@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
 
 :root {
   --bg: #24273a;
   --link: #8aadf4;
   --visited: #c6a0f6;
-  --primary: #13141b;
-  --secondary: #181926;
+  --primary: rgb(12, 13, 17);
+  --secondary: #171720;
   --text: #cad3f5;
 }
 
@@ -13,7 +14,7 @@ body {
   background: var(--bg);
   padding: 1rem 2rem;
   color: var(--text);
-  font-family: 'Ubuntu', 'Segoe UI', sans-serif;
+  font-family: 'SUSE', sans-serif;
   font-size: 20px;
 }
 
@@ -57,6 +58,7 @@ footer > a {
 }
 
 a:link {
+  text-decoration: wavy underline;
   color: var(--link);
 }
 
@@ -70,6 +72,7 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h6 {
