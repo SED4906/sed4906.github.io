@@ -4,14 +4,14 @@
   --bg: #24273a;
   --link: #8aadf4;
   --visited: #c6a0f6;
-  --primary: #6e738d;
+  --primary: #13141b;
   --secondary: #181926;
   --text: #cad3f5;
 }
 
 body {
   background: var(--bg);
-  padding: 5rem 3rem;
+  padding: 1rem 2rem;
   color: var(--text);
   font-family: 'Ubuntu', 'Segoe UI', sans-serif;
   font-size: 20px;
