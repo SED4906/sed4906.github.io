@@ -7,3 +7,5 @@ https://lnc-americas-test-kitchen2.tubi.video/playlist.m3u8
 https://lnc-gordon-ramsey.tubi.video/index.m3u8
 #EXTINF:-1 tvg-id="MysteryScienceTheater3000.us" tvg-logo="https://i.imgur.com/8KWjY4o.png" group-title="Comedy",Mystery Science Theater 3000
 https://mst3k-vizio.amagi.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="WMPTDT2.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Create_TV_network_logo.svg/512px-Create_TV_network_logo.svg.png" group-title="",WMPT-DT2
+https://2-fss-1.streamhoster.com/pl_122/amlst:201814-2122456/playlist.m3u8
