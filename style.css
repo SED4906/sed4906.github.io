@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gidole&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
 
 :root {
   --bg: #24273a;
   --link: #8aadf4;
   --visited: #c6a0f6;
-  --primary: rgb(12, 13, 17);
+  --primary: #0d0d11;
   --secondary: #171720;
   --text: #cad3f5;
 }
@@ -14,7 +14,7 @@ body {
   background: var(--bg);
   padding: 1rem 2rem;
   color: var(--text);
-  font-family: 'SUSE', sans-serif;
+  font-family: 'Gidole', sans-serif;
   font-size: 20px;
 }
 
@@ -23,21 +23,26 @@ section {
 }
 
 details {
-  display: inline;
+  border-radius: 4px;
+  display: block;
   background: var(--primary);
   margin: 0.5rem;
-  padding: 0;
   width: fit-content;
 }
 
 details[open] {
+  display: block;
+}
+
+#extras details {
   display: inline;
 }
 
 summary {
-  background: var(--secondary);
+  background-image: linear-gradient(var(--secondary), var(--primary));
   margin: 0;
   padding: 6px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
@@ -47,8 +52,9 @@ article {
 
 footer {
   padding: 0 4px 2px 2px;
+  border-radius: 4px;
   display:inline-block;
-  background-color: var(--primary);
+  background-image: linear-gradient(var(--secondary), var(--primary));
   cursor: default;
 }
 
@@ -72,7 +78,7 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Courier Prime', serif;
 }
 
 h6 {
@@ -103,12 +109,24 @@ h6::after {
   margin-right: -50%;
 }
 
-figure {
-  display: inline-block;
+.image-item {
+  max-width: 400px;
+  display: block;
 }
 
-figure > a > img {
+.image-item > a > img {
   object-fit: contain;
   width: 100%;
   max-height: 400px;
+}
+
+#main-columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+}
+
+#games, #art, #code, #extras {
+
 }

@@ -11,86 +11,99 @@
 <body>
   <h3>Welcome to 4906.org</h3>
 
-  <section>
-
     <article>
       <p>I'm SED.</p>
       <img src="m/comingforyou.png">
-      <p>I'm a rotom. There are some <a href="https://sed4906.itch.io">games I've made.</a> I <a
+      <p>I'm a rotom. There are some <a href="https://sed4906.itch.io">games I've made</a>. I <a
           href="https://sed4906.tumblr.com/">draw things</a> and <a href="https://github.com/SED4906">write code</a>.
       </p>
     </article>
 
+    <div id="main-columns">
+
+    <div id="games">
     <h6>Games</h6>
 
-    <figure>
+    <details class="image-item" open>
+    <summary>Kilo Blockbot, ~2025-01-25 <a href="kbb">(Play now)</a></summary>
       <a href="https://sed4906.itch.io/kilo-blockbot"><img src="m/kbb-tile.png"></a>
-      <figcaption>Kilo Blockbot, original quasipublic pre-release Jan. 25, 2025 <a href="kbb">(Play now)</a></figcaption>
-    </figure>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3200468725"><img src="m/IMG_1242.jpg"></a>
-      <figcaption>Trade Wars, Mar. 20, 2024</figcaption>
-    </figure>
+      <summary>Trade Wars, 2024-03-20</summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://sed4906.itch.io/three-friends"><img src="m/three-friends-screenshot.png"></a>
-      <figcaption>Three Friends, Aug. 06, 2023 <a href="3f">(Play now)</a></figcaption>
-    </figure>
+      <summary>Three Friends, 2023-08-06 <a href="3f">(Play now)</a></summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2910316423"><img src="m/mount-screenshot.jpg"></a>
-      <figcaption>Mount, circa Dec. 31, 2022</figcaption>
-    </figure>
+      <summary>Mount, ≤ 2022-12-31</summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2910310451"><img
           src="m/esrever-screenshot.jpg"></a>
-      <figcaption>Esrever, circa Dec. 31, 2022</figcaption>
-    </figure>
+      <summary>Esrever, ≤ 2022-12-31</summary>
+    </details>
+    </div>
 
+    <div id="art">
     <h6>Art</h6>
 
-    <figure>
+    <details class="image-item" open>
+      <a href="https://sed4906.tumblr.com/post/790442494702780416"><img src="m/woinx_ref.png"></a>
+      <summary>Woinx the CAT, 2025-07-26</summary>
+    </details>
+
+    <details class="image-item" open>
       <a href="https://sed4906.tumblr.com/post/747296123162607616"><img src="m/angry_blockbot.png"></a>
-      <figcaption>Angry Blockbot, Apr. 09, 2024</figcaption>
-    </figure>
+      <summary>Angry Blockbot, 2024-04-09</summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://sed4906.tumblr.com/post/740714850864496640"><img src="m/meowers.jpg"></a>
-      <figcaption>Drawing of some friends, Jan. 25, 2024</figcaption>
-    </figure>
+      <summary>Drawing of some friends, 2024-01-25</summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://sed4906.tumblr.com/post/733993776527343616"><img src="m/sedar-energy.png"></a>
-      <figcaption>SEDar Energy, Nov. 14, 2023</figcaption>
-    </figure>
+      <summary>SEDar Energy, 2023-11-14</summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://sed4906.tumblr.com/post/706249912980029440"><img src="m/sed-paws.png"></a>
-      <figcaption>The SED, Jan. 12, 2023</figcaption>
-    </figure>
+      <summary>The SED, 2023-01-12</summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://sed4906.tumblr.com/post/704072748716163072"><img src="m/nyepsilon.png"></a>
-      <figcaption>Epsilon Room, Dec. 19, 2022</figcaption>
-    </figure>
+      <summary>Epsilon Room, 2022-12-19</summary>
+    </details>
+    </div>
 
+    <div id="code">
     <h6>Code</h6>
 
-    <figure>
+    <details class="image-item" open>
       <a href="https://github.com/SED4906/systemcontrol/"><img src="m/systemcontrol-screenshot.png"
           alt="Screenshot of System Control"></a>
-      <figcaption>System Control, since Aug. 19, 2024</figcaption>
-    </figure>
+      <summary>System Control, since 2024-08-19</summary>
+    </details>
 
-    <figure>
+    <details class="image-item" open>
 	    <a href="compositv"><img src="m/compositv.png" alt="ComposiTV logo"></a>
-	    <figcaption>ComposiTV, since Feb. 28, 2024</figcaption>
-    </figure>
+	    <summary>ComposiTV, since 2024-02-28</summary>
+    </details>
+    </div>
 
+  </div>
+
+  <div id="extras">
     <h6>Extras</h6>
-
     <h4>Click any section to expand it.</h4>
 
     <details>
@@ -148,9 +161,7 @@
         <canvas id="lesscanvas" width="0" height="0"></canvas>
       </article>
     </details>
-  </section>
-
-  <details>
+    <details>
     <summary>Tiniest text generator</summary>
     <article>
       <p>Create text in a very small (1x4) bitmap <a href="https://github.com/balt-dev/bytesized-gf">font.</a> (modified
@@ -162,6 +173,8 @@
       <canvas id="tiniestcanvas" width="0" height="0"></canvas>
     </article>
   </details>
+  </div>
+
   <br>
   <footer>
     🔗
