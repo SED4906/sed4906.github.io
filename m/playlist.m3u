@@ -7,7 +7,7 @@ https://livetv-fa.tubi.video/gordon-ramsey/index.m3u8
 https://apollo.production-public.tubi.io/live/mst3k-ed1arm.m3u8
 #EXTINF:-1 tvg-id="KQEDDT2.us@SD" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/8/89/PBS_logo_2019.svg" group-title="Entertainment",KQED-DT2 SD
 https://kqeddt2.lls.pbs.org/kqeddt2-hls.m3u8
-#EXTINF:-1 tvg-id="Create.us@SD" tvg-logo="https://i.imgur.com/OIJTECP.png" group-title="Education",Create SD
-https://create.lls.pbs.org/index.m3u8
+#EXTINF:-1 tvg-id="WMPTDT2.us" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Create_TV_network_logo.svg/512px-Create_TV_network_logo.svg.png" group-title="",WMPT-DT2
+https://2-fss-1.streamhoster.com/pl_122/amlst:201814-2122456/playlist.m3u8
 #EXTINF:-1 tvg-id="DoctorWhoClassic.us" tvg-logo="https://i.imgur.com/JIqJQQM.png" group-title="Series",Doctor Who Classic
 https://bbc-classicdrwho-1-us.roku.wurl.tv/playlist.m3u8
