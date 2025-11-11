@@ -11,3 +11,5 @@ https://kqeddt2.lls.pbs.org/kqeddt2-hls.m3u8
 https://2-fss-1.streamhoster.com/pl_122/amlst:201814-2122456/playlist.m3u8
 #EXTINF:-1 tvg-id="DoctorWhoClassic.us" tvg-logo="https://i.imgur.com/JIqJQQM.png" group-title="Series",Doctor Who Classic
 https://bbc-classicdrwho-1-us.roku.wurl.tv/playlist.m3u8
+#EXTINF:-1 tvg-id="PBS.us@West" tvg-logo="https://i.postimg.cc/ZnL6G6KV/pbs.png" group-title="Education",PBS West
+https://pbs.lls.cdn.pbs.org/pst/index.m3u8
