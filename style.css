@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Gidole&display=swap');
-
-@font-face {
-  font-family: Sedenion; /* set name */
-  src: url(m/f/Sedenion-Regular.ttf); /* url of the font */
-}
+@import url('https://fonts.googleapis.com/css2?family=Iosevka+Charon+Mono:wght@400;700&display=swap');
 
 :root {
   --bg: #2e3436;
+  --bg2: #212526;
   --link: #729fcf;
-  --visited: #d68bcd;
-  --primary: #212526;
-  --secondary: #000000;
+  --highlight: #c0c000;
+  --highlight2: #343434;
+  --primary: #bfbfbf;
+  --secondary: #d3d7cf;
   --text: #eeeeec;
+  --special: #d68bcd;
+  --special2: #6fc918;
 }
 
 body {
-  background: var(--bg);
-  padding: 1rem 2rem;
+  border-left: 0.5rem solid var(--bg2);
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
   color: var(--text);
-  font-family: 'Gidole', sans-serif;
+  font-family: "Iosevka Charon Mono", monospace;
   font-size: 18px;
 }
 
@@ -27,10 +28,10 @@ section {
 }
 
 details {
-  border-radius: 4px;
   display: block;
-  background: var(--primary);
+  background-color: var(--primary);
   margin: 0.5rem;
+  margin-bottom: 2em;
   width: fit-content;
 }
 
@@ -40,14 +41,27 @@ details[open] {
 
 #extras details {
   display: inline-block;
+  background-color: var(--bg2);
 }
 
 summary {
-  background-image: linear-gradient(var(--secondary), var(--primary));
+  background-color: var(--primary);
+  color: var(--bg);
   margin: 0;
   padding: 6px;
-  border-radius: 4px;
   cursor: pointer;
+  a {
+      margin-left: 0.5em;
+  }
+  a:link,a:visited {
+      color: var(--bg);
+      text-decoration: none;
+      border: 1px solid transparent;
+  }
+  a:hover,a:focus {
+      color: var(--bg);
+      border: 1px solid var(--highlight2);
+  }
 }
 
 article {
@@ -55,25 +69,45 @@ article {
 }
 
 footer {
-  padding: 0 4px 2px 2px;
-  border-radius: 4px;
   display:inline-block;
-  background-image: linear-gradient(var(--secondary), var(--primary));
-  cursor: default;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  margin-left: -0.5em;
+  color: var(--text);
+  background-color: var(--bg);
+  nav {
+    padding-left: 1em;
+    background-color: var(--secondary);
+    cursor: default;
+    a {
+        margin-left: 0.5em;
+    }
+    a:link,a:visited {
+        color: var(--bg);
+        text-decoration: none;
+        border: 1px solid transparent;
+    }
+    a:hover,a:focus {
+        color: var(--bg);
+        border: 1px solid var(--highlight2);
+    }
+  }
+  span {
+      border-left: 0.5rem solid var(--bg2);
+  }
 }
 
-footer > a {
-  border-left: var(--bg) solid 1px;
-  padding-left: 4px;
-}
-
-a:link {
-  text-decoration: wavy underline;
+a:link,a:visited {
+  text-decoration: underline;
   color: var(--link);
 }
 
-a:visited {
-  color: var(--visited);
+a:hover,a:focus {
+  text-decoration: none;
+  color: var(--bg);
+  background-color: var(--highlight);
 }
 
 hr {
@@ -82,7 +116,13 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
-  font-family: 'Sedenion', sans-serif;
+  font-family: "Iosevka Charon Mono", monospace;
+}
+
+h3 {
+  color: var(--special2);
+  font-size: 1em;
+  margin: 0;
 }
 
 h6 {
