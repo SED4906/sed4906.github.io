@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Gidole&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+@font-face {
+  font-family: Sedenion; /* set name */
+  src: url(m/f/Sedenion-Regular.ttf); /* url of the font */
+}
 
 :root {
-  --bg: #24273a;
-  --link: #8aadf4;
-  --visited: #c6a0f6;
-  --primary: #0d0d11;
-  --secondary: #171720;
-  --text: #cad3f5;
+  --bg: #2e3436;
+  --link: #729fcf;
+  --visited: #d68bcd;
+  --primary: #212526;
+  --secondary: #000000;
+  --text: #eeeeec;
 }
 
 body {
@@ -15,7 +19,7 @@ body {
   padding: 1rem 2rem;
   color: var(--text);
   font-family: 'Gidole', sans-serif;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 section {
@@ -35,7 +39,7 @@ details[open] {
 }
 
 #extras details {
-  display: inline;
+  display: inline-block;
 }
 
 summary {
@@ -78,7 +82,7 @@ hr {
 
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
-  font-family: 'Courier Prime', serif;
+  font-family: 'Sedenion', sans-serif;
 }
 
 h6 {
