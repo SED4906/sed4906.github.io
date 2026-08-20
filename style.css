@@ -125,6 +125,12 @@ h3 {
   margin: 0;
 }
 
+h5 {
+  color: var(--special);
+  font-size: 1em;
+  margin: 0;
+}
+
 h6 {
   overflow: hidden;
   text-align: center;
