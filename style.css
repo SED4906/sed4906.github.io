@@ -29,19 +29,14 @@ section {
 
 details {
   display: block;
-  background-color: var(--primary);
+  background-color: var(--bg2);
   margin: 0.5rem;
   margin-bottom: 2em;
   width: fit-content;
 }
 
-details[open] {
-  display: block;
-}
-
 #extras details {
   display: inline-block;
-  background-color: var(--bg2);
 }
 
 summary {
@@ -50,18 +45,6 @@ summary {
   margin: 0;
   padding: 6px;
   cursor: pointer;
-  a {
-      margin-left: 0.5em;
-  }
-  a:link,a:visited {
-      color: var(--bg);
-      text-decoration: none;
-      border: 1px solid transparent;
-  }
-  a:hover,a:focus {
-      color: var(--bg);
-      border: 1px solid var(--highlight2);
-  }
 }
 
 article {
@@ -81,22 +64,22 @@ footer {
     padding-left: 1em;
     background-color: var(--secondary);
     cursor: default;
-    a {
-        margin-left: 0.5em;
-    }
-    a:link,a:visited {
-        color: var(--bg);
-        text-decoration: none;
-        border: 1px solid transparent;
-    }
-    a:hover,a:focus {
-        color: var(--bg);
-        border: 1px solid var(--highlight2);
-    }
   }
   span {
       border-left: 0.5rem solid var(--bg2);
   }
+}
+
+summary a,footer a {
+    margin-left: 0.5em;
+    &:link,&:visited {
+        color: var(--bg);
+        text-decoration: none;
+        border: 1px solid transparent;
+    }
+    &:hover,&:focus {
+        border: 1px solid var(--highlight2);
+    }
 }
 
 a:link,a:visited {
@@ -110,64 +93,56 @@ a:hover,a:focus {
   background-color: var(--highlight);
 }
 
-hr {
-  color: var(--text);
-}
-
 h1,h2,h3,h4,h5,h6 {
   font-weight: normal;
   font-family: "Iosevka Charon Mono", monospace;
 }
 
+h3,h5 {
+    font-size: 1em;
+    margin: 0;
+}
+
 h3 {
   color: var(--special2);
-  font-size: 1em;
-  margin: 0;
 }
 
 h5 {
   color: var(--special);
-  font-size: 1em;
-  margin: 0;
 }
 
 h6 {
   overflow: hidden;
   text-align: center;
   cursor: default;
-}
-
-h6::before,
-h6::after {
-  background-color: var(--text);
-  content: "";
-  display: inline-block;
-  height: 1px;
-  position: relative;
-  vertical-align: middle;
-  margin: auto;
-  width: 50%;
-}
-
-h6::before {
-  right: 0.5em;
-  margin-left: -50%;
-}
-
-h6::after {
-  left: 0.5em;
-  margin-right: -50%;
+  &::before,&::after {
+      background-color: var(--text);
+      content: "";
+      display: inline-block;
+      height: 1px;
+      position: relative;
+      vertical-align: middle;
+      margin: auto;
+      width: 50%;
+  }
+  &::before {
+    right: 0.5em;
+    margin-left: -50%;
+  }
+  &::after {
+    left: 0.5em;
+    margin-right: -50%;
+  }
 }
 
 .image-item {
   max-width: 400px;
   display: block;
-}
-
-.image-item > a > img {
-  object-fit: contain;
-  width: 100%;
-  max-height: 400px;
+  img {
+      object-fit: contain;
+      width: 100%;
+      max-height: 400px;
+  }
 }
 
 #main-columns {
@@ -175,8 +150,4 @@ h6::after {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: stretch;
-}
-
-#games, #art, #code, #extras {
-
 }
